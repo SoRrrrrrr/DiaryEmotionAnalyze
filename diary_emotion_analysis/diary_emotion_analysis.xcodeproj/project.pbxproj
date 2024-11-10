@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3172E05A2CD0C4D3006435DE /* diary_emotion_analysisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E0592CD0C4D3006435DE /* diary_emotion_analysisApp.swift */; };
-		3172E05C2CD0C4D3006435DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E05B2CD0C4D3006435DE /* ContentView.swift */; };
+		3172E05A2CD0C4D3006435DE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E0592CD0C4D3006435DE /* DiaryView.swift */; };
 		3172E05E2CD0C4D6006435DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E05D2CD0C4D6006435DE /* Assets.xcassets */; };
 		3172E0612CD0C4D6006435DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3172E0602CD0C4D6006435DE /* Preview Assets.xcassets */; };
 		3172E06B2CD0C4D6006435DE /* diary_emotion_analysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E06A2CD0C4D6006435DE /* diary_emotion_analysisTests.swift */; };
 		3172E0752CD0C4D6006435DE /* diary_emotion_analysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E0742CD0C4D6006435DE /* diary_emotion_analysisUITests.swift */; };
 		3172E0772CD0C4D6006435DE /* diary_emotion_analysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E0762CD0C4D6006435DE /* diary_emotion_analysisUITestsLaunchTests.swift */; };
+		3172E0842CD0E3E8006435DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E05B2CD0C4D3006435DE /* ContentView.swift */; };
+		3172E0862CD0E7E2006435DE /* diary_emotion_analysisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172E0852CD0E7E2006435DE /* diary_emotion_analysisApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		3172E0562CD0C4D3006435DE /* diary_emotion_analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diary_emotion_analysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3172E0592CD0C4D3006435DE /* diary_emotion_analysisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diary_emotion_analysisApp.swift; sourceTree = "<group>"; };
+		3172E0592CD0C4D3006435DE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		3172E05B2CD0C4D3006435DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3172E05D2CD0C4D6006435DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3172E0602CD0C4D6006435DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		3172E0702CD0C4D6006435DE /* diary_emotion_analysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diary_emotion_analysisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3172E0742CD0C4D6006435DE /* diary_emotion_analysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diary_emotion_analysisUITests.swift; sourceTree = "<group>"; };
 		3172E0762CD0C4D6006435DE /* diary_emotion_analysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diary_emotion_analysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3172E0852CD0E7E2006435DE /* diary_emotion_analysisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diary_emotion_analysisApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		3172E04D2CD0C4D2006435DE = {
 			isa = PBXGroup;
 			children = (
+				3172E0852CD0E7E2006435DE /* diary_emotion_analysisApp.swift */,
 				3172E0582CD0C4D3006435DE /* diary_emotion_analysis */,
 				3172E0692CD0C4D6006435DE /* diary_emotion_analysisTests */,
 				3172E0732CD0C4D6006435DE /* diary_emotion_analysisUITests */,
@@ -94,7 +97,7 @@
 		3172E0582CD0C4D3006435DE /* diary_emotion_analysis */ = {
 			isa = PBXGroup;
 			children = (
-				3172E0592CD0C4D3006435DE /* diary_emotion_analysisApp.swift */,
+				3172E0592CD0C4D3006435DE /* DiaryView.swift */,
 				3172E05B2CD0C4D3006435DE /* ContentView.swift */,
 				3172E05D2CD0C4D6006435DE /* Assets.xcassets */,
 				3172E05F2CD0C4D6006435DE /* Preview Content */,
@@ -257,8 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3172E05C2CD0C4D3006435DE /* ContentView.swift in Sources */,
-				3172E05A2CD0C4D3006435DE /* diary_emotion_analysisApp.swift in Sources */,
+				3172E0842CD0E3E8006435DE /* ContentView.swift in Sources */,
+				3172E0862CD0E7E2006435DE /* diary_emotion_analysisApp.swift in Sources */,
+				3172E05A2CD0C4D3006435DE /* DiaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
