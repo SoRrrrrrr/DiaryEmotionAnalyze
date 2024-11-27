@@ -78,6 +78,7 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# 나중에 MySQL로 setting 하기
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
