@@ -2,8 +2,8 @@
 import torch
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from transformers import pipeline# BERT 모델 사용
-from googletrans import Translator # 구글 번역 라이브러리\
+from transformers import pipeline # BERT 모델 사용
+from googletrans import Translator # 구글 번역 라이브러리
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -21,19 +21,19 @@ def analyze_diary(request):
     if not diary_text:
         return Response({"error":"No diary text provided"}, status=400)
     
-     # Step1 : Korean -> Japanese
+    # Step1 : Korean -> Japanese
     japanese_text = translator.translate(diary_text, src='ko',dest='ja').text
     
     # Step2 : Japanese -> english
-    english_text = translator.translate(diary_text, src='ja',dest='en').text
+    english_text = translator.translate(japanese_text, src='ja',dest='en').text
     
     # 영어 텍스트가 문자열인지 확인
     if not isinstance(english_text,str):
         raise ValueError("Translated text is not a valid string.")
     
     # sentiment analyze
-    analysis = sentiment_analyzer(diary_text)
-    sentiment = analysis[0] # 결과 라벨 가져오기
+    analysis = sentiment_analyzer(english_text)
+    sentiment = analysis[0]['label'] # 결과 라벨 가져오기
     
     #Positive or Negative or Neutral 
-    return Response({"sentiment":sentiment})
+    return Response({"sentiment": sentiment})
