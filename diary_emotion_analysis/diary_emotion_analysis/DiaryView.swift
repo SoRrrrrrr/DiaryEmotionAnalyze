@@ -1,4 +1,3 @@
-//
 //  diary_emotion_analysisApp.swift
 //  diary_emotion_analysis
 //  Created by 권소령 on 10/29/24.
@@ -6,10 +5,11 @@
 import SwiftUI
 
 struct DiaryView: View {
-    //@State ?
-    @State private var diaryText: String = "" // 사용자가 작성할 일기 내용 저장하는 변수
-    @State private var analysisResult: String? //감정분석 결과 표시할 변수
+    @State private var diaryText: String="" // 사용자가 작성할 일기 내용을 저장하는 변수
+    @State private var analysisResult: String? // 감정분석 결과 표시할 변수
+    @State private var diaryID: Int? // 저장된 다이어리 ID
     
+    //---------------------UI 화면 디자인----------------------
     var body: some View{
         VStack{
             Text("Today's diary")
@@ -22,8 +22,9 @@ struct DiaryView: View {
                 .border(Color.gray, width:2)
                 .frame(height:300)
             
+            //save button 누르면 saveDiary function 실행
             Button(action: saveDiary){
-                Text("save")
+                Text("Save")
                     .padding()
                     .background(Color.green)
                     .foregroundColor(.white)
@@ -31,6 +32,10 @@ struct DiaryView: View {
             }
             if let result = analysisResult{
                 Text("result of analysis emotions : \(result)")
+                    .padding()
+            }
+            if let id = diaryID {
+                Text("Diary ID : \(id)")
                     .padding()
             }
         }
@@ -42,14 +47,15 @@ struct DiaryView: View {
 
     func sendDiaryToServer(_ diaryText: String){
         //서버 url 설정
-        guard let url = URL(string:"http://127.0.0.1:8000/analyze") else {return}
+        //애뮬레이터에서는 127.0.0.1이 아닌 내 개인 컴퓨터 IP로 연결해야 함
+        guard let url = URL(string:"http://--my pc ip --:8000/analyze") else {return}
         
         // 요청 설정
         var request = URLRequest(url:url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "content-Type")
         
-        // create JSON data(이건 왜 하는 거임)
+        // create JSON data
         // optional binding 적용
         // 값이 필요없는 경우 let _ 를 사용해서 간단하게 처리 가능
         guard let jsonData = try? JSONSerialization.data(withJSONObject: ["diaryText":diaryText])else{
@@ -69,17 +75,18 @@ struct DiaryView: View {
             guard let data = data else {return}
             
             // 서버에서 받은 감정 분석 결과 parsing
-            if let responseDict = try? JSONSerialization.jsonObject(with: data) as? [String:String],
-               let sentiment = responseDict["sentiment"]{
+            if let responseDict = try? JSONSerialization.jsonObject(with: data) as? [String:Any],
+               let sentiment = responseDict["sentiment"] as? String,
+               let id = responseDict["diary_id"] as? Int{
                 DispatchQueue.main.async{
                     // 서버에서 반환된 감정 분석 결과 저장하는 변수
                     self.analysisResult = sentiment
+                    self.diaryID = id
                 }
             }
         }.resume()
     }
 }
-
 
 #Preview {
     DiaryView()
