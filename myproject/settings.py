@@ -25,8 +25,8 @@ SECRET_KEY = "django-insecure-m&)$0qgudh=(7l7s4t%^&_l2^43huq(m&%g+&&80rd()x7$6xd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# 내 컴퓨터 Ip 추가 하기 (와이파이 연결에 따라 달라지니까 주의 !)
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost', '--my pc ip --']
+# 내 컴퓨터 IP : '192.168.68.55'(와이파이 연결에 따라 달라지니까 주의 !)
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost', '--my pc ip--']
 
 
 # Application definition
@@ -85,8 +85,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "mydatabase",
         "USER" : "root1",
-        "PASSWORD":"-- my password --",
-        "HOST":'--my pc ip --', # 왤케 자주 바뀜 ;; 
+        "PASSWORD":"password",
+        "HOST":'--my pc ip --',
         "PORT":'3306', # mysql 기본 포트
     }
 }

@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+## add new API endpoint
+from diary_app.views import analyze_diary
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('analyze/',analyze_diary),
     path('', include('diary_app.urls')) # include app's urls.py
 ]

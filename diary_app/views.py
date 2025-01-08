@@ -14,7 +14,6 @@ warnings.filterwarnings('ignore')
 # GPU 사용할 환경이면 device=0
 # model => Hugging face 에서 개발한 모델
 sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english", device=-1)
-
 ## translator 초기화
 translator = Translator()
 
@@ -31,29 +30,25 @@ def analyze_diary(request):
         ## Step2 : Japanese -> english
         english_text = translator.translate(japanese_text, src='ja',dest='en').text
         
-        # 영어 텍스트가 문자열인지 확인
-        if not isinstance(english_text,str):
-            raise Response({"error":"Translated text is not a valid string."}, status=400)
-        
-        # sentiment analyze
+        ## sentiment analyze
         analysis = sentiment_analyzer(english_text)
         # 결과 라벨 가져오기
         sentiment = analysis[0]['label'] #Positive or Negative or Neutral
         
-        ## Step3 : save diary data
+        ## Save to DB
         # -> 여기서 error 발생
-        # with transaction.atomic(): # commit only all tesk completed
-        #     diary = Diary.objects.create(
-        #         text=diary_text,
-        #         sentiment=sentiment
-        #     )
+        with transaction.atomic(): # commit only all tesk completed
+            diary = Diary.objects.create(
+                text=diary_text,
+                sentiment=sentiment
+            )
         
         ## API response
         return Response({
             # 메세지는 어디서 확인 가능함 ?
             "message":"Diary saved successfully",
             "sentiment": sentiment,
-           # "diary_id":diary.id # return new created diary_id
+            "diary_id":diary.id # return new created diary_id
         })
         
     except Exception as e:
