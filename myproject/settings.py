@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-m&)$0qgudh=(7l7s4t%^&_l2^43huq(m&%g+&&80rd()x7$6xd
 DEBUG = True
 
 # 내 컴퓨터 IP 추가하기(와이파이 연결에 따라 달라지니까 주의 !)
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost', '-- my pc ip --']
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost', '-- local ip --']
 
 
 # Application definition
@@ -53,6 +53,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+
+CORS_ALLOWED_ORGINS =[
+    "http://http://-- local ip --:8000",
 ]
 
 ROOT_URLCONF = "myproject.urls"
@@ -85,12 +89,11 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "mydatabase",
         "USER" : "root1",
-        "PASSWORD":"password",
-        "HOST":'--my pc ip --',
+        "PASSWORD":"Qncjsla07@",
+        "HOST":'-- local ip --',
         "PORT":'3306', # mysql 기본 포트
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

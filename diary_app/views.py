@@ -17,6 +17,7 @@ sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncas
 ## translator 초기화
 translator = Translator()
 
+### 감성 분석 API
 @api_view(['POST'])
 def analyze_diary(request):
     diary_text = request.data.get("diaryText")
@@ -36,7 +37,6 @@ def analyze_diary(request):
         sentiment = analysis[0]['label'] #Positive or Negative or Neutral
         
         ## Save to DB
-        # -> 여기서 error 발생
         with transaction.atomic(): # commit only all tesk completed
             diary = Diary.objects.create(
                 text=diary_text,
@@ -45,7 +45,6 @@ def analyze_diary(request):
         
         ## API response
         return Response({
-            # 메세지는 어디서 확인 가능함 ?
             "message":"Diary saved successfully",
             "sentiment": sentiment,
             "diary_id":diary.id # return new created diary_id
@@ -53,3 +52,17 @@ def analyze_diary(request):
         
     except Exception as e:
         return Response({"error":f"Internal server error: {str(e)}"}, status=500)
+
+### 일기 기록 조회 API
+@api_view(['GET'])
+def get_diary_entries(request):
+    diary_entries = Diary.objects.all().order_by('-created_at')
+    diary_list = [
+        {
+            "id":entry.id,
+            "text":entry.text,
+            "sentiment":entry.sentiment,
+            "created_at":entry.created_at.strftime('%Y-%m-%d %H:%M:%S')
+        }for entry in diary_entries
+    ]
+    return Response({"diary_entries":diary_list})

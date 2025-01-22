@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 ## add new API endpoint
-from diary_app.views import analyze_diary
+from diary_app.views import analyze_diary, get_diary_entries
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('analyze/',analyze_diary),
+    #path("admin/", admin.site.urls),
+    path('analyze/',analyze_diary), # 일기 내용을 서버로 전송하고 감정 분석 결과 반환
+    path('diary_entries/',get_diary_entries), # 서버에 저장된 모든 일기 기록을 조회
     path('', include('diary_app.urls')) # include app's urls.py
 ]
