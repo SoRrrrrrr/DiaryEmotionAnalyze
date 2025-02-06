@@ -1,5 +1,5 @@
 <!-- 들어가야 하는 내용 
-      프로젝트명, app이 무엇을 하는지, 왜 그 기술을 사용했는지, 당면한 문제나 나중에 추가하고 싶은 기능이 있는지 -->
+      프로젝트명, app이 무엇을 하는지, 왜 그 기술을 사용했는지, 당면한 문제나 나중에 추가하고 싶은 기능이 있는지, 프로젝트 설치 및 실행 방법 -->
 # 😃Diary Emotion Analysis App😞
 ### This is an iOS Application about Diary Emotion Analysis.<br>
 When you write a diary, the NLP model analyzes and displays your feelings for the diary. <br>
