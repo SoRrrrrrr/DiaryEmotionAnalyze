@@ -1,12 +1,21 @@
-# Diary Emotion Analysis App
-This is iOS Application about diary emotion analysis.
-When you write down a diary on app, then you can see the emotion.
+<!-- 들어가야 하는 내용 
+      프로젝트명, app이 무엇을 하는지, 왜 그 기술을 사용했는지, 당면한 문제나 나중에 추가하고 싶은 기능이 있는지 -->
+# 😃Diary Emotion Analysis App😞
+### This is an iOS Application about Diary Emotion Analysis.<br>
+When you write a diary, the NLP model analyzes and displays your feelings for the diary. <br>
+Also, You can save the diary and emotion to check your History page. <br>
 
-## Stacks
+**It's my first time developing an app so the features and UI are very simple 🥲😅**
+I'm going to modify it gradually after !
+
+## Contents
+[1. Tech Stacks ](#-Tech-Stacks) <br>
+[2. UI ](#-UI) <br>
+
+## Tech Stacks
 FrontEnd : Swift(iOS) <br>
 Server : python Django <br>
 NLP : BERT(Model), fine-tuning, hugging face
-
 
 ## UI
 <!-- 바꾼 모델은 맘에 안드므로 일단 이미지 이걸로 해두고 다음에 수정하기 -->
