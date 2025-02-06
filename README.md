@@ -8,10 +8,6 @@ Also, You can save the diary and emotion to check your History page. <br>
 **It's my first time developing an app so the features and UI are very simple 🥲😅**
 I'm going to modify it gradually after !
 
-## Contents
-[1. Tech Stacks ](#-Tech-Stacks) <br>
-[2. UI ](#-UI) <br>
-
 ## Tech Stacks
 FrontEnd : Swift(iOS) <br>
 Server : python Django <br>
@@ -24,3 +20,4 @@ NLP : BERT(Model), fine-tuning, hugging face
 <img src="https://github.com/user-attachments/assets/3a98249f-05ed-4737-9826-fe6e9711d3c5" width="300" height="600"/>
 <img src="https://github.com/user-attachments/assets/671a6e35-e176-4a65-a84f-26debf25b426" width="300" height="600"/>
 </p>
+
