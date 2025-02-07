@@ -21,3 +21,8 @@ NLP : BERT(Model), fine-tuning, hugging face
 <img src="https://github.com/user-attachments/assets/671a6e35-e176-4a65-a84f-26debf25b426" width="300" height="600"/>
 </p>
 
+## Key file Path
+**1. views.py** => myproject/diary_app/views.py <br>
+**1. models.py** => myproject/diary_app/models.py <br>
+**2. settings.py** => myproject/myproject/settings.py <br>
+**1. urls.py ( containing API path)** => myproject/myproject/urls.py <br>
