@@ -34,7 +34,7 @@ def analyze_diary(request):
         
         ## sentiment analyze
         analysis = sentiment_analyzer(english_text)
-        # 결과 라벨 가져오기(Positive or Negative)
+        # 결과 라벨 가져오기
         sentiment = analysis[0]['label'] 
         
         ## Save to DB
