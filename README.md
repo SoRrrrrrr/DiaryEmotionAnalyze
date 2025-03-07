@@ -10,7 +10,7 @@ I'm going to modify it gradually after !
 
 ## Tech Stacks
 FrontEnd : Swift(iOS) <br>
-Server : python Django <br>
+BackEnd : python Django <br>
 NLP : BERT(Model), fine-tuning, hugging face
 
 ## UI
