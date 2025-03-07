@@ -16,9 +16,10 @@ NLP : BERT(Model), fine-tuning, hugging face
 ## UI
 <!-- 바꾼 모델은 맘에 안드므로 일단 이미지 이걸로 해두고 다음에 수정하기 -->
 <p align="center">
-<img src="https://github.com/user-attachments/assets/d5e69142-f34b-439e-81c7-08b97d3fbb36" width="300" height="600"/>
-<img src="https://github.com/user-attachments/assets/3a98249f-05ed-4737-9826-fe6e9711d3c5" width="300" height="600"/>
-<img src="https://github.com/user-attachments/assets/671a6e35-e176-4a65-a84f-26debf25b426" width="300" height="600"/>
+      
+<img src="https://github.com/user-attachments/assets/430312fd-8047-47dd-aab9-62c687258b91" width="300" height="600"/>
+<img src="https://github.com/user-attachments/assets/dd70471b-5568-4466-a71a-e639688909e4" width="300" height="600"/>
+<img src="https://github.com/user-attachments/assets/68a52cc1-c8d9-4ea3-aa70-77c77c95aab5" width="300" height="600"/>
 </p>
 
 ## Key file Path
