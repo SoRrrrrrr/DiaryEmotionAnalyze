@@ -32,3 +32,8 @@ https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/24627fb44b5714818785bea0aca9bf0c5ff93d33/myproject/settings.py <br>
 **1. urls.py ( containing API path )** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/myproject/urls.py <br>
+### FrontEnd Files
+**1. Entry Point File**
+https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/6ac0cc7f66158875b1605a945eed392c2f7c83fa/diary_emotion_analysis/diary_emotion_analysisApp.swift <br>
+**2. UI View Files**
+https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/tree/6ac0cc7f66158875b1605a945eed392c2f7c83fa/diary_emotion_analysis/diary_emotion_analysis <br>
