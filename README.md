@@ -27,6 +27,6 @@ https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee
 **1. models.py** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/diary_app/models.py <br>
 **2. settings.py**
-https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/myproject/settings.py <br>
+https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/24627fb44b5714818785bea0aca9bf0c5ff93d33/myproject/settings.py <br>
 **1. urls.py ( containing API path )** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/myproject/urls.py <br>
