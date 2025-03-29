@@ -11,6 +11,7 @@ I'm going to modify it gradually after !
 ## Tech Stacks
 FrontEnd : Swift(iOS) <br>
 BackEnd : python Django <br>
+DB : MySQL <br>
 NLP : BERT(Model), fine-tuning, hugging face
 
 ## UI
