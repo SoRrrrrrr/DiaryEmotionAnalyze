@@ -27,11 +27,11 @@ NLP : BERT(Model), fine-tuning, hugging face
 ### BackEnd Files
 **1. views.py** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/diary_app/views.py <br>
-**1. models.py** 
+**2. models.py** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/diary_app/models.py <br>
-**2. settings.py**
+**3. settings.py**
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/24627fb44b5714818785bea0aca9bf0c5ff93d33/myproject/settings.py <br>
-**1. urls.py ( containing API path )** 
+**4. urls.py ( containing API path )** 
 https://github.com/SoRrrrrrr/DiaryEmotionAnalyze/blob/38a3ba561684543291c352afee0ef480d0343c9f/myproject/urls.py <br>
 ### FrontEnd Files
 **1. Entry Point File**
